@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road PK Selector</title>
+    <link rel="stylesheet" href="../styles/style.css">
+	    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    
+	<div id="controls">
+        <input type="text" id="roadSearch" placeholder="Search Road Number..." list="roadList">
+        <datalist id="roadList"></datalist>
+        <input type="number" id="pkStart" placeholder="Enter PK Start (e.g., 5000)">
+        <input type="number" id="pkEnd" placeholder="Enter PK End (e.g., 8000)">
+        <button onclick="filterRoads()">Show Road</button>
+        <button onclick="saveAsKMZ(currentSegment)">Save as KMZ</button>
+        <button onclick="loadAndShowRoads()">Load and Connect Roads</button>
+    </div>
+	
+    <div id="map"></div>
+	    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	
+	<!-- Install JSZip for KMZ Creation-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>
